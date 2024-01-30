@@ -7,9 +7,11 @@ include_once ('db.php');
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ajouter une Pizza</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <h1>Ajouter une Pizza</h1>
+<div class="container">
+        <h1 class="mt-4">Ajouter une Pizza</h1>
 
     <?php
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -44,5 +46,6 @@ include_once ('db.php');
 
     <br>
     <a href="index.php">Retour à la liste des Pizzas</a>
+    </div>
 </body>
 </html>
