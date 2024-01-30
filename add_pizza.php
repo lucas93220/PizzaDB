@@ -1,3 +1,6 @@
+<?php
+include_once ('db.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,13 +17,7 @@
         $design = $_POST["design"];
         $tarif = $_POST["tarif"];
 
-        // Connexion à la base de données
-        $conn = new mysqli('localhost', 'root', '', 'pizzadb');
-
-        // Vérifier la connexion
-        if ($conn->connect_error) {
-            die("La connexion a échoué : " . $conn->connect_error);
-        }
+      
 
         // Insérer une nouvelle pizza dans la base de données
         $sql = "INSERT INTO pizza (DESIGNPIZZ, TARIFPIZZ) VALUES ('$design', '$tarif')";

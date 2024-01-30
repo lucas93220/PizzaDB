@@ -1,3 +1,6 @@
+<?php
+include_once ('db.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,12 +17,7 @@
         // Récupérer l'ID de la pizza
         $id = $_GET["id"];
 
-        // Connexion à la base de données
-        $conn = new mysqli('localhost', 'root', '', 'pizzadb');
-        // Vérifier la connexion
-        if ($conn->connect_error) {
-            die("La connexion a échoué : " . $conn->connect_error);
-        }
+ 
 
         // Récupérer les détails de la pizza à partir de la base de données
         $result = $conn->query("SELECT * FROM pizza WHERE NROPIZZ = $id");

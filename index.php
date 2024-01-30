@@ -1,3 +1,6 @@
+<?php
+include_once ('db.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,12 +12,7 @@
     <h1>Liste des Pizzas</h1>
 
     <?php
-    // Connexion à la base de données
-    $conn = new mysqli('localhost', 'root', '', 'pizzadb');
-    // Vérifier la connexion
-    if ($conn->connect_error) {
-        die("La connexion a échoué : " . $conn->connect_error);
-    }
+  
 
     // Récupérer les pizzas depuis la base de données
     $result = $conn->query("SELECT * FROM pizza");

@@ -1,16 +1,13 @@
 <?php
+
+include_once ('db.php');
+
 // Vérifier si l'ID de la pizza est passé en paramètre
 if(isset($_GET["id"])) {
     // Récupérer l'ID de la pizza
     $id = $_GET["id"];
 
-    // Connexion à la base de données
-    $conn = new mysqli('localhost', 'root', '', 'pizzadb');
 
-    // Vérifier la connexion
-    if ($conn->connect_error) {
-        die("La connexion a échoué : " . $conn->connect_error);
-    }
 
     // Supprimer la pizza de la base de données
     $sql = "DELETE FROM pizza WHERE NROPIZZ=$id";
