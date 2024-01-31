@@ -11,7 +11,6 @@ include_once('update_ingredients.php');
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Liste des Ingrédients</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -55,7 +54,6 @@ include_once('update_ingredients.php');
         </div>
     </div>
 
-    <!-- Modal Ajouter Ingrédient -->
     <div class="modal fade" id="ajouterIngredientModal" tabindex="-1" role="dialog" aria-labelledby="ajouterIngredientModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">

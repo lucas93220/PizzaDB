@@ -1,5 +1,4 @@
 <?php
-// Supprimer un ingrédient
 if (isset($_GET['action']) && $_GET['action'] == 'delete' && isset($_GET['id'])) {
     $id = $_GET['id'];
     $delete_query = "DELETE FROM ingredient WHERE CODEINGR = ?";
@@ -11,7 +10,6 @@ if (isset($_GET['action']) && $_GET['action'] == 'delete' && isset($_GET['id']))
     exit();
 }
 
-// Modifier ou ajouter un ingrédient
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (isset($_POST['add_ingredient'])) {
         $nom = $_POST['nom'];
@@ -33,7 +31,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 }
 
-// Récupérer la liste des ingrédients depuis la base de données
 $query = "SELECT * FROM ingredient";
 $result = $conn->query($query);
 ?>

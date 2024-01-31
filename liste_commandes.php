@@ -1,7 +1,6 @@
 <?php
 include('db.php');
 
-// Récupérer la liste des commandes depuis la base de données
 $query = "SELECT * FROM commande";
 $result = $conn->query($query);
 ?>
@@ -13,7 +12,6 @@ $result = $conn->query($query);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Liste des Commandes</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">

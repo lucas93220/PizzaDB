@@ -1,7 +1,6 @@
 <?php
 include('db.php');
 
-// Récupérer la liste des livreurs depuis la base de données
 $query = "SELECT * FROM livreur";
 $result = $conn->query($query);
 ?>
@@ -13,7 +12,6 @@ $result = $conn->query($query);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Liste des Livreurs</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -24,7 +22,7 @@ $result = $conn->query($query);
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link" href="index.php">Accueil</a>
+                    <a class="nav-link" href="index.php">Liste des pizzas</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="liste_commandes.php">Liste des Commandes</a>
